@@ -11,7 +11,43 @@
 		AF7A1B242B6A7598000FD995 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B232B6A7598000FD995 /* ContentView.swift */; };
 		AF7A1B262B6A759A000FD995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7A1B252B6A759A000FD995 /* Assets.xcassets */; };
 		AF7A1B2A2B6A759A000FD995 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7A1B292B6A759A000FD995 /* Preview Assets.xcassets */; };
+		AF7A1B322B6A75B9000FD995 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B312B6A75B9000FD995 /* Advice.swift */; };
+		AF7A1B3A2B6A7747000FD995 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7A1B392B6A7747000FD995 /* WidgetKit.framework */; };
+		AF7A1B3C2B6A7747000FD995 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7A1B3B2B6A7747000FD995 /* SwiftUI.framework */; };
+		AF7A1B3F2B6A7747000FD995 /* AdviceSlipWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B3E2B6A7747000FD995 /* AdviceSlipWidgetBundle.swift */; };
+		AF7A1B412B6A7747000FD995 /* AdviceSlipWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B402B6A7747000FD995 /* AdviceSlipWidget.swift */; };
+		AF7A1B432B6A7749000FD995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7A1B422B6A7749000FD995 /* Assets.xcassets */; };
+		AF7A1B472B6A7749000FD995 /* AdviceSlipWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AF7A1B372B6A7747000FD995 /* AdviceSlipWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF7A1B4D2B6A77CE000FD995 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B312B6A75B9000FD995 /* Advice.swift */; };
+		AF7A1B502B6A9BE2000FD995 /* SaveIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B4E2B6A7E1F000FD995 /* SaveIntent.swift */; };
+		AF7A1B542B6AA137000FD995 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B522B6AA135000FD995 /* Buddy.swift */; };
+		AF7A1B562B6AB20D000FD995 /* RefreshIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B552B6AB20D000FD995 /* RefreshIntent.swift */; };
+		AF7A1B572B6ABD30000FD995 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B522B6AA135000FD995 /* Buddy.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF7A1B452B6A7749000FD995 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF7A1B162B6A7598000FD995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF7A1B362B6A7747000FD995;
+			remoteInfo = AdviceSlipWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF7A1B4B2B6A7749000FD995 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AF7A1B472B6A7749000FD995 /* AdviceSlipWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AF7A1B1E2B6A7598000FD995 /* AdviceSlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdviceSlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +56,18 @@
 		AF7A1B252B6A759A000FD995 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF7A1B272B6A759A000FD995 /* AdviceSlip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdviceSlip.entitlements; sourceTree = "<group>"; };
 		AF7A1B292B6A759A000FD995 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF7A1B312B6A75B9000FD995 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		AF7A1B372B6A7747000FD995 /* AdviceSlipWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AdviceSlipWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7A1B392B6A7747000FD995 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AF7A1B3B2B6A7747000FD995 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		AF7A1B3E2B6A7747000FD995 /* AdviceSlipWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceSlipWidgetBundle.swift; sourceTree = "<group>"; };
+		AF7A1B402B6A7747000FD995 /* AdviceSlipWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceSlipWidget.swift; sourceTree = "<group>"; };
+		AF7A1B422B6A7749000FD995 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF7A1B442B6A7749000FD995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7A1B4C2B6A7782000FD995 /* AdviceSlipWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdviceSlipWidgetExtension.entitlements; sourceTree = "<group>"; };
+		AF7A1B4E2B6A7E1F000FD995 /* SaveIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveIntent.swift; sourceTree = "<group>"; };
+		AF7A1B522B6AA135000FD995 /* Buddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
+		AF7A1B552B6AB20D000FD995 /* RefreshIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,13 +78,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF7A1B342B6A7747000FD995 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7A1B3C2B6A7747000FD995 /* SwiftUI.framework in Frameworks */,
+				AF7A1B3A2B6A7747000FD995 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		AF7A1B152B6A7598000FD995 = {
 			isa = PBXGroup;
 			children = (
+				AF7A1B302B6A75AC000FD995 /* Shared */,
 				AF7A1B202B6A7598000FD995 /* AdviceSlip */,
+				AF7A1B3D2B6A7747000FD995 /* AdviceSlipWidget */,
+				AF7A1B382B6A7747000FD995 /* Frameworks */,
 				AF7A1B1F2B6A7598000FD995 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				AF7A1B1E2B6A7598000FD995 /* AdviceSlip.app */,
+				AF7A1B372B6A7747000FD995 /* AdviceSlipWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +130,38 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AF7A1B302B6A75AC000FD995 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A1B522B6AA135000FD995 /* Buddy.swift */,
+				AF7A1B312B6A75B9000FD995 /* Advice.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AF7A1B382B6A7747000FD995 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A1B392B6A7747000FD995 /* WidgetKit.framework */,
+				AF7A1B3B2B6A7747000FD995 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF7A1B3D2B6A7747000FD995 /* AdviceSlipWidget */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A1B3E2B6A7747000FD995 /* AdviceSlipWidgetBundle.swift */,
+				AF7A1B402B6A7747000FD995 /* AdviceSlipWidget.swift */,
+				AF7A1B552B6AB20D000FD995 /* RefreshIntent.swift */,
+				AF7A1B4E2B6A7E1F000FD995 /* SaveIntent.swift */,
+				AF7A1B422B6A7749000FD995 /* Assets.xcassets */,
+				AF7A1B442B6A7749000FD995 /* Info.plist */,
+				AF7A1B4C2B6A7782000FD995 /* AdviceSlipWidgetExtension.entitlements */,
+			);
+			path = AdviceSlipWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +172,34 @@
 				AF7A1B1A2B6A7598000FD995 /* Sources */,
 				AF7A1B1B2B6A7598000FD995 /* Frameworks */,
 				AF7A1B1C2B6A7598000FD995 /* Resources */,
+				AF7A1B4B2B6A7749000FD995 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF7A1B462B6A7749000FD995 /* PBXTargetDependency */,
 			);
 			name = AdviceSlip;
 			productName = AdviceSlip;
 			productReference = AF7A1B1E2B6A7598000FD995 /* AdviceSlip.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AF7A1B362B6A7747000FD995 /* AdviceSlipWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7A1B482B6A7749000FD995 /* Build configuration list for PBXNativeTarget "AdviceSlipWidgetExtension" */;
+			buildPhases = (
+				AF7A1B332B6A7747000FD995 /* Sources */,
+				AF7A1B342B6A7747000FD995 /* Frameworks */,
+				AF7A1B352B6A7747000FD995 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AdviceSlipWidgetExtension;
+			productName = AdviceSlipWidgetExtension;
+			productReference = AF7A1B372B6A7747000FD995 /* AdviceSlipWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +212,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					AF7A1B1D2B6A7598000FD995 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					AF7A1B362B6A7747000FD995 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -118,6 +233,7 @@
 			projectRoot = "";
 			targets = (
 				AF7A1B1D2B6A7598000FD995 /* AdviceSlip */,
+				AF7A1B362B6A7747000FD995 /* AdviceSlipWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +248,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF7A1B352B6A7747000FD995 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7A1B432B6A7749000FD995 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,10 +265,33 @@
 			files = (
 				AF7A1B242B6A7598000FD995 /* ContentView.swift in Sources */,
 				AF7A1B222B6A7598000FD995 /* AdviceSlipApp.swift in Sources */,
+				AF7A1B572B6ABD30000FD995 /* Buddy.swift in Sources */,
+				AF7A1B322B6A75B9000FD995 /* Advice.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7A1B332B6A7747000FD995 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7A1B3F2B6A7747000FD995 /* AdviceSlipWidgetBundle.swift in Sources */,
+				AF7A1B412B6A7747000FD995 /* AdviceSlipWidget.swift in Sources */,
+				AF7A1B542B6AA137000FD995 /* Buddy.swift in Sources */,
+				AF7A1B562B6AB20D000FD995 /* RefreshIntent.swift in Sources */,
+				AF7A1B502B6A9BE2000FD995 /* SaveIntent.swift in Sources */,
+				AF7A1B4D2B6A77CE000FD995 /* Advice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF7A1B462B6A7749000FD995 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF7A1B362B6A7747000FD995 /* AdviceSlipWidgetExtension */;
+			targetProxy = AF7A1B452B6A7749000FD995 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF7A1B2B2B6A759A000FD995 /* Debug */ = {
@@ -264,6 +411,7 @@
 		AF7A1B2E2B6A759A000FD995 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AdviceSlip/AdviceSlip.entitlements;
@@ -302,6 +450,7 @@
 		AF7A1B2F2B6A759A000FD995 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AdviceSlip/AdviceSlip.entitlements;
@@ -337,6 +486,71 @@
 			};
 			name = Release;
 		};
+		AF7A1B492B6A7749000FD995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AdviceSlipWidget/AdviceSlipWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BGYHUAQL5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdviceSlipWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AdviceSlipWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.AdviceSlip.AdviceSlipWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF7A1B4A2B6A7749000FD995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AdviceSlipWidget/AdviceSlipWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BGYHUAQL5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdviceSlipWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AdviceSlipWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.AdviceSlip.AdviceSlipWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -354,6 +568,15 @@
 			buildConfigurations = (
 				AF7A1B2E2B6A759A000FD995 /* Debug */,
 				AF7A1B2F2B6A759A000FD995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF7A1B482B6A7749000FD995 /* Build configuration list for PBXNativeTarget "AdviceSlipWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7A1B492B6A7749000FD995 /* Debug */,
+				AF7A1B4A2B6A7749000FD995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
