@@ -34,8 +34,9 @@ struct Provider: TimelineProvider {
          This method returns immediately, but calls the completion handler at the end of the task.
          */
         Task { @MainActor in
+            //TODO: refactor this part
             // fetch new advice
-            guard let adviceSlip = await Buddy.shared.getAdviceToShow() else {
+            guard let adviceSlip = await WiseBuddy.shared.getAdviceToShow() else {
                 // exit if error
                 let newEntry = SimpleEntry(date: .now, slip: AdviceSlip(id: 0, advice: "No advice"), saved: false)
                 let timeline = Timeline(entries: [newEntry], policy: .never)
@@ -45,7 +46,7 @@ struct Provider: TimelineProvider {
             
             // check if it's saved
             var fetchDescriptor = FetchDescriptor(sortBy: [SortDescriptor(\Advice.id, order: .forward)])
-            guard let now = Buddy.shared.generatedAt else {
+            guard let now = WiseBuddy.shared.generatedAt else {
                 //TODO: fix logic here
                 return
             }

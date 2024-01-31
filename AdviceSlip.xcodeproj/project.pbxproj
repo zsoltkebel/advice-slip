@@ -20,9 +20,9 @@
 		AF7A1B472B6A7749000FD995 /* AdviceSlipWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AF7A1B372B6A7747000FD995 /* AdviceSlipWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AF7A1B4D2B6A77CE000FD995 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B312B6A75B9000FD995 /* Advice.swift */; };
 		AF7A1B502B6A9BE2000FD995 /* SaveIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B4E2B6A7E1F000FD995 /* SaveIntent.swift */; };
-		AF7A1B542B6AA137000FD995 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B522B6AA135000FD995 /* Buddy.swift */; };
+		AF7A1B542B6AA137000FD995 /* WiseBuddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */; };
 		AF7A1B562B6AB20D000FD995 /* RefreshIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B552B6AB20D000FD995 /* RefreshIntent.swift */; };
-		AF7A1B572B6ABD30000FD995 /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B522B6AA135000FD995 /* Buddy.swift */; };
+		AF7A1B572B6ABD30000FD995 /* WiseBuddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		AF7A1B442B6A7749000FD995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7A1B4C2B6A7782000FD995 /* AdviceSlipWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdviceSlipWidgetExtension.entitlements; sourceTree = "<group>"; };
 		AF7A1B4E2B6A7E1F000FD995 /* SaveIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveIntent.swift; sourceTree = "<group>"; };
-		AF7A1B522B6AA135000FD995 /* Buddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
+		AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseBuddy.swift; sourceTree = "<group>"; };
 		AF7A1B552B6AB20D000FD995 /* RefreshIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +133,7 @@
 		AF7A1B302B6A75AC000FD995 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A1B522B6AA135000FD995 /* Buddy.swift */,
+				AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */,
 				AF7A1B312B6A75B9000FD995 /* Advice.swift */,
 			);
 			path = Shared;
@@ -265,7 +265,7 @@
 			files = (
 				AF7A1B242B6A7598000FD995 /* ContentView.swift in Sources */,
 				AF7A1B222B6A7598000FD995 /* AdviceSlipApp.swift in Sources */,
-				AF7A1B572B6ABD30000FD995 /* Buddy.swift in Sources */,
+				AF7A1B572B6ABD30000FD995 /* WiseBuddy.swift in Sources */,
 				AF7A1B322B6A75B9000FD995 /* Advice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +276,7 @@
 			files = (
 				AF7A1B3F2B6A7747000FD995 /* AdviceSlipWidgetBundle.swift in Sources */,
 				AF7A1B412B6A7747000FD995 /* AdviceSlipWidget.swift in Sources */,
-				AF7A1B542B6AA137000FD995 /* Buddy.swift in Sources */,
+				AF7A1B542B6AA137000FD995 /* WiseBuddy.swift in Sources */,
 				AF7A1B562B6AB20D000FD995 /* RefreshIntent.swift in Sources */,
 				AF7A1B502B6A9BE2000FD995 /* SaveIntent.swift in Sources */,
 				AF7A1B4D2B6A77CE000FD995 /* Advice.swift in Sources */,

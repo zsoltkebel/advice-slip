@@ -9,8 +9,8 @@ import Foundation
 import SwiftData
 
 // The Advice Manager
-class Buddy {
-    static let shared = Buddy(frequency: DateComponents(minute: 15))
+class WiseBuddy {
+    static let shared = WiseBuddy(frequency: DateComponents(minute: 15))
     
     var generatedAt: Date?
     var advice: AdviceSlip?
@@ -28,26 +28,21 @@ class Buddy {
     }
     
     func getAdviceToShow() async -> AdviceSlip? {
-        guard let fetchDate = generatedAt, let adviceSlip = advice else {
-            print("1")
-            let r = try? await fetchAdvice()
-            return r
+        if let generatedAt = generatedAt,
+           let advice = advice,
+           let refreshDate = Calendar.current.date(byAdding: frequency, to: generatedAt)
+        {
+            if refreshDate.compare(Date()) == .orderedDescending {
+                // Refresh time has not been passed, do not fetch new advice
+                return advice
+            }
         }
         
-        guard let refreshDate = Calendar.current.date(byAdding: frequency, to: fetchDate) else {
-            print("2")
-            let r = try? await fetchAdvice()
-            return r
+        if let newAdvice = try? await fetchAdvice() {
+            return newAdvice
         }
         
-        if refreshDate.compare(Date()) == .orderedDescending {
-            print("yes im aright")
-            return adviceSlip
-        }
-        
-        print("3")
-        let r = try? await fetchAdvice()
-        return r
+        return advice
     }
     
     /// Fetch advice slip
@@ -64,27 +59,6 @@ class Buddy {
         generatedAt = Date()
         advice = adviceSlipResult.slip
         return adviceSlipResult.slip
-    }
-    
-    @MainActor func loadAdvice(adviceID: Int, completion: @escaping (Advice?) -> ()) {
-        // check if it's saved
-        var fetchDescriptor = FetchDescriptor(sortBy: [SortDescriptor(\Advice.id, order: .forward)])
-        let now = Date.now
-        fetchDescriptor.predicate = #Predicate { $0.id == adviceID }
-        if let savedAdvice = try? modelContainer.mainContext.fetch(fetchDescriptor) {
-            completion(savedAdvice.first)
-        }
-        
-        completion(nil)
-    }
-    
-    func save() {
-        if let advice = advice {
-            let newAdvice = Advice(id: advice.id, advice: advice.advice)
-            let modelContext = ModelContext(modelContainer)
-            modelContext.insert(newAdvice)
-            
-        }
     }
     
     @MainActor
@@ -106,19 +80,4 @@ class Buddy {
             modelContainer.mainContext.insert(newAdvice)
         }
     }
-    
-//    func isSaved() async -> Bool {
-//        guard let adviceSlip = advice else {
-//            return false
-//        }
-//        
-//        let res = try? dataManager.getAdvice(id: adviceSlip.id)
-//        return res != nil
-//    }
-//    
-//    func num() async -> Int {
-//        return try! dataManager.getAdviceNum()
-//    }
-//    
 }
-
