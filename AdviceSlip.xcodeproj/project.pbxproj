@@ -23,6 +23,9 @@
 		AF7A1B542B6AA137000FD995 /* WiseBuddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */; };
 		AF7A1B562B6AB20D000FD995 /* RefreshIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B552B6AB20D000FD995 /* RefreshIntent.swift */; };
 		AF7A1B572B6ABD30000FD995 /* WiseBuddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */; };
+		AF7A1B592B6AC3E6000FD995 /* AdviceListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B582B6AC3E6000FD995 /* AdviceListItem.swift */; };
+		AF7A1B5B2B6AC476000FD995 /* ModelContainerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B5A2B6AC476000FD995 /* ModelContainerPreview.swift */; };
+		AF7A1B5D2B6AC48D000FD995 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B5C2B6AC48D000FD995 /* PreviewSampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		AF7A1B4E2B6A7E1F000FD995 /* SaveIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveIntent.swift; sourceTree = "<group>"; };
 		AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiseBuddy.swift; sourceTree = "<group>"; };
 		AF7A1B552B6AB20D000FD995 /* RefreshIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshIntent.swift; sourceTree = "<group>"; };
+		AF7A1B582B6AC3E6000FD995 /* AdviceListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceListItem.swift; sourceTree = "<group>"; };
+		AF7A1B5A2B6AC476000FD995 /* ModelContainerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerPreview.swift; sourceTree = "<group>"; };
+		AF7A1B5C2B6AC48D000FD995 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 			children = (
 				AF7A1B212B6A7598000FD995 /* AdviceSlipApp.swift */,
 				AF7A1B232B6A7598000FD995 /* ContentView.swift */,
+				AF7A1B582B6AC3E6000FD995 /* AdviceListItem.swift */,
 				AF7A1B252B6A759A000FD995 /* Assets.xcassets */,
 				AF7A1B272B6A759A000FD995 /* AdviceSlip.entitlements */,
 				AF7A1B282B6A759A000FD995 /* Preview Content */,
@@ -135,6 +142,8 @@
 			children = (
 				AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */,
 				AF7A1B312B6A75B9000FD995 /* Advice.swift */,
+				AF7A1B5C2B6AC48D000FD995 /* PreviewSampleData.swift */,
+				AF7A1B5A2B6AC476000FD995 /* ModelContainerPreview.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -263,9 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7A1B592B6AC3E6000FD995 /* AdviceListItem.swift in Sources */,
 				AF7A1B242B6A7598000FD995 /* ContentView.swift in Sources */,
+				AF7A1B5D2B6AC48D000FD995 /* PreviewSampleData.swift in Sources */,
 				AF7A1B222B6A7598000FD995 /* AdviceSlipApp.swift in Sources */,
 				AF7A1B572B6ABD30000FD995 /* WiseBuddy.swift in Sources */,
+				AF7A1B5B2B6AC476000FD995 /* ModelContainerPreview.swift in Sources */,
 				AF7A1B322B6A75B9000FD995 /* Advice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +434,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Wise Buddy";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -461,6 +474,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Wise Buddy";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

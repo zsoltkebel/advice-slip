@@ -88,8 +88,10 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct AdviceSlipWidgetEntryView : View {
+    @Environment(\.widgetFamily) var family
+    
     var entry: Provider.Entry
-
+    
     var body: some View {
         VStack {
             Spacer(minLength: 0)
@@ -99,16 +101,18 @@ struct AdviceSlipWidgetEntryView : View {
             HStack {
                 if #available(iOS 17.0, *) {
                     Button(intent: RefreshIntent()) {
-                            Image(systemName: "arrow.clockwise")
-                        }
-                        .buttonStyle(.bordered)
+                        Image(systemName: "arrow.clockwise")
+                    }
+                    .buttonStyle(.bordered)
                 }
-                if #available(iOS 17.0, *) {
-                    Button(intent: SaveIntent(adviceID: entry.slip.id, adviceText: entry.slip.advice)) {
+                if family != .systemSmall {
+                    if #available(iOS 17.0, *) {
+                        Button(intent: SaveIntent(adviceID: entry.slip.id, adviceText: entry.slip.advice)) {
                             Image(systemName: entry.saved ? "bookmark.fill" : "bookmark")
                         }
                         .buttonStyle(.bordered)
                         .tint(.secondary)
+                    }
                 }
                 Spacer(minLength: 0)
                 Text(entry.date, style: .time)
