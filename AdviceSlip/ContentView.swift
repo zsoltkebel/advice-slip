@@ -42,7 +42,9 @@ struct ContentView: View {
             }
             .navigationTitle("Saved Advices")
             .toolbar {
-                Text("Total: \(advices.count)")
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Total: \(advices.count)")
+                }
             }
         }
     }
