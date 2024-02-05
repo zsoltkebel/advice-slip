@@ -97,6 +97,7 @@ struct AdviceSlipWidgetEntryView : View {
             Spacer(minLength: 0)
             Text(entry.slip.advice)
                 .minimumScaleFactor(0.1)
+                .font(.title3)
             Spacer(minLength: 10)
             HStack {
                 if #available(iOS 17.0, *) {
