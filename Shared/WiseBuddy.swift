@@ -18,8 +18,17 @@ class WiseBuddy {
     
     let modelContainer: ModelContainer
     
+    let dataSource: APIDataSource
+    
     init(frequency: DateComponents) {
         self.frequency = frequency
+//        self.dataSource = AdviceSlipDataSource()
+        
+        // Retrieve saved data source
+        let rawValue = UserDefaults.shared?.integer(forKey: "dataSource") ?? 0
+        let source = DataSource(rawValue: rawValue) ?? .adviceSlip
+        self.dataSource = source.getAPIDataSource()
+        
         do {
             modelContainer = try ModelContainer(for: Advice.self)
         } catch {
@@ -47,18 +56,18 @@ class WiseBuddy {
     
     /// Fetch advice slip
     func fetchAdvice() async throws -> AdviceSlip {
-        guard let url = URL(string: "https://api.adviceslip.com/advice") else { fatalError("Missing URL") }
-
-        // Use the async variant of URLSession to fetch data
-        // Code might suspend here
-        let (data, _) = try await URLSession.shared.data(from: url)
+        // Retrieve saved data source
+        let rawValue = UserDefaults.shared?.integer(forKey: "dataSource") ?? 0
+        let source = DataSource(rawValue: rawValue) ?? .adviceSlip
+        let dataSource = source.getAPIDataSource()
+        print("Retrieving data from: \(String(describing: dataSource.getURL()))")
         
-        // Parse the JSON data
-        let adviceSlipResult = try JSONDecoder().decode(AdviceSlipResponse.self, from: data)
+        let response = try await dataSource.fetch()
         
         generatedAt = Date()
-        advice = adviceSlipResult.slip
-        return adviceSlipResult.slip
+        advice = AdviceSlip(id: 0, advice: response.getContent())
+        
+        return advice!
     }
     
     @MainActor

@@ -15,6 +15,8 @@ struct ContentView: View {
     @Query(sort: \Advice.id, order: .forward)
     var advices: [Advice]
     
+    @AppStorage("dataSource", store: UserDefaults.shared) private var selectedDataSource: DataSource = .adviceSlip
+    
     var body: some View {
         //TODO: could use NavigationSplitView here
         NavigationView {
@@ -40,10 +42,30 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("Saved Advices")
+            .navigationTitle("Saved Snippets")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text("Total: \(advices.count)")
+                }
+                ToolbarItem {
+                    Menu("Menu", systemImage: "ellipsis.circle") {
+                        Button("Show Source Info", systemImage: "info.circle") {
+                            //TODO: implement sheet
+                            print("Show info")
+                        }
+                        Picker(selection: $selectedDataSource) {
+                            ForEach(DataSource.allCases) { source in
+                                Text(source.getName()).tag(source)
+                            }
+                        } label: {
+                            Button(action: {}, label: {
+                                Text("Snippet Source")
+                                Text(selectedDataSource.getName())
+                                Image(systemName: "network")
+                            })
+                        }
+                        .pickerStyle(.menu)
+                    }
                 }
             }
         }

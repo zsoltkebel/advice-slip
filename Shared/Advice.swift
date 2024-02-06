@@ -10,24 +10,21 @@ import SwiftUI
 import SwiftData
 import AppIntents
 
-/// http response object
-struct AdviceSlipResponse: Codable {
-    let slip: AdviceSlip
-}
-/// http response object
-struct AdviceSlip: Codable, Hashable {
-    let id: Int
-    let advice: String
-}
-
 @Model final class Advice {
     var id: Int
     var advice: String
+    // var sourceID: Int // corresponding to DataSource enum's rawValue
     
     init(id: Int, advice: String) {
         self.id = id
         self.advice = advice
     }
+    
+//    init(from: APIResponse, sourceID: Int) {
+//        self.advice = from.getContent()
+//        self.author = from.getAuthor()
+//        self.sourceID = sourceID
+//    }
 }
 
 extension Advice {

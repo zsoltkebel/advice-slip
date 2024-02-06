@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3AA9992B71A9F700E3EDA6 /* AdviceSlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9982B71A9F700E3EDA6 /* AdviceSlip.swift */; };
+		AF3AA99B2B71AA0400E3EDA6 /* KanyeRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA99A2B71AA0400E3EDA6 /* KanyeRest.swift */; };
+		AF3AA99D2B71AA1000E3EDA6 /* Quotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA99C2B71AA1000E3EDA6 /* Quotable.swift */; };
+		AF3AA99E2B71AA1C00E3EDA6 /* AdviceSlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9982B71A9F700E3EDA6 /* AdviceSlip.swift */; };
+		AF3AA99F2B71AA1E00E3EDA6 /* KanyeRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA99A2B71AA0400E3EDA6 /* KanyeRest.swift */; };
+		AF3AA9A02B71AA2100E3EDA6 /* Quotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA99C2B71AA1000E3EDA6 /* Quotable.swift */; };
+		AF3AA9A22B71AA7C00E3EDA6 /* APIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9A12B71AA7C00E3EDA6 /* APIDataSource.swift */; };
+		AF3AA9A32B71AA7C00E3EDA6 /* APIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9A12B71AA7C00E3EDA6 /* APIDataSource.swift */; };
+		AF3AA9A52B71AAB200E3EDA6 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9A42B71AAB200E3EDA6 /* DataSource.swift */; };
+		AF3AA9A62B71AAB200E3EDA6 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9A42B71AAB200E3EDA6 /* DataSource.swift */; };
+		AF3AA9A82B71BC6900E3EDA6 /* ZenQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9A72B71BC6900E3EDA6 /* ZenQuotes.swift */; };
+		AF3AA9A92B71BC6900E3EDA6 /* ZenQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9A72B71BC6900E3EDA6 /* ZenQuotes.swift */; };
 		AF7A1B222B6A7598000FD995 /* AdviceSlipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B212B6A7598000FD995 /* AdviceSlipApp.swift */; };
 		AF7A1B242B6A7598000FD995 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1B232B6A7598000FD995 /* ContentView.swift */; };
 		AF7A1B262B6A759A000FD995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7A1B252B6A759A000FD995 /* Assets.xcassets */; };
@@ -53,6 +65,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF3AA9982B71A9F700E3EDA6 /* AdviceSlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceSlip.swift; sourceTree = "<group>"; };
+		AF3AA99A2B71AA0400E3EDA6 /* KanyeRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanyeRest.swift; sourceTree = "<group>"; };
+		AF3AA99C2B71AA1000E3EDA6 /* Quotable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotable.swift; sourceTree = "<group>"; };
+		AF3AA9A12B71AA7C00E3EDA6 /* APIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataSource.swift; sourceTree = "<group>"; };
+		AF3AA9A42B71AAB200E3EDA6 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		AF3AA9A72B71BC6900E3EDA6 /* ZenQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenQuotes.swift; sourceTree = "<group>"; };
 		AF7A1B1E2B6A7598000FD995 /* AdviceSlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdviceSlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7A1B212B6A7598000FD995 /* AdviceSlipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceSlipApp.swift; sourceTree = "<group>"; };
 		AF7A1B232B6A7598000FD995 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +114,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3AA9972B71A9DC00E3EDA6 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				AF3AA9A12B71AA7C00E3EDA6 /* APIDataSource.swift */,
+				AF3AA9A42B71AAB200E3EDA6 /* DataSource.swift */,
+				AF3AA9982B71A9F700E3EDA6 /* AdviceSlip.swift */,
+				AF3AA99A2B71AA0400E3EDA6 /* KanyeRest.swift */,
+				AF3AA99C2B71AA1000E3EDA6 /* Quotable.swift */,
+				AF3AA9A72B71BC6900E3EDA6 /* ZenQuotes.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 		AF7A1B152B6A7598000FD995 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +171,7 @@
 		AF7A1B302B6A75AC000FD995 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AF3AA9972B71A9DC00E3EDA6 /* DataSources */,
 				AF7A1B522B6AA135000FD995 /* WiseBuddy.swift */,
 				AF7A1B312B6A75B9000FD995 /* Advice.swift */,
 				AF7A1B5C2B6AC48D000FD995 /* PreviewSampleData.swift */,
@@ -274,11 +306,17 @@
 			files = (
 				AF7A1B592B6AC3E6000FD995 /* AdviceListItem.swift in Sources */,
 				AF7A1B242B6A7598000FD995 /* ContentView.swift in Sources */,
+				AF3AA9A82B71BC6900E3EDA6 /* ZenQuotes.swift in Sources */,
 				AF7A1B5D2B6AC48D000FD995 /* PreviewSampleData.swift in Sources */,
+				AF3AA9A52B71AAB200E3EDA6 /* DataSource.swift in Sources */,
 				AF7A1B222B6A7598000FD995 /* AdviceSlipApp.swift in Sources */,
+				AF3AA99B2B71AA0400E3EDA6 /* KanyeRest.swift in Sources */,
 				AF7A1B572B6ABD30000FD995 /* WiseBuddy.swift in Sources */,
 				AF7A1B5B2B6AC476000FD995 /* ModelContainerPreview.swift in Sources */,
 				AF7A1B322B6A75B9000FD995 /* Advice.swift in Sources */,
+				AF3AA99D2B71AA1000E3EDA6 /* Quotable.swift in Sources */,
+				AF3AA9992B71A9F700E3EDA6 /* AdviceSlip.swift in Sources */,
+				AF3AA9A22B71AA7C00E3EDA6 /* APIDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +324,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3AA9A02B71AA2100E3EDA6 /* Quotable.swift in Sources */,
 				AF7A1B3F2B6A7747000FD995 /* AdviceSlipWidgetBundle.swift in Sources */,
 				AF7A1B412B6A7747000FD995 /* AdviceSlipWidget.swift in Sources */,
+				AF3AA9A32B71AA7C00E3EDA6 /* APIDataSource.swift in Sources */,
+				AF3AA9A92B71BC6900E3EDA6 /* ZenQuotes.swift in Sources */,
 				AF7A1B542B6AA137000FD995 /* WiseBuddy.swift in Sources */,
 				AF7A1B562B6AB20D000FD995 /* RefreshIntent.swift in Sources */,
+				AF3AA9A62B71AAB200E3EDA6 /* DataSource.swift in Sources */,
 				AF7A1B502B6A9BE2000FD995 /* SaveIntent.swift in Sources */,
 				AF7A1B4D2B6A77CE000FD995 /* Advice.swift in Sources */,
+				AF3AA99F2B71AA1E00E3EDA6 /* KanyeRest.swift in Sources */,
+				AF3AA99E2B71AA1C00E3EDA6 /* AdviceSlip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
