@@ -23,7 +23,7 @@ enum DataSource: Int, CaseIterable, Identifiable {
     func getAPIDataSource() -> APIDataSource {
         switch self {
         case .random:
-            return [AdviceSlipDataSource(), KanyeDataSource(), QuotableDataSource()].randomElement() as! APIDataSource
+            return [AdviceSlipDataSource(), KanyeDataSource(), QuotableDataSource(), ZenQuotesDataSource()].randomElement() as! APIDataSource
         case .adviceSlip:
             return AdviceSlipDataSource()
         case .kanyeRest:

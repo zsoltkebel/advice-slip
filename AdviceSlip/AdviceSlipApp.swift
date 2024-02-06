@@ -13,6 +13,6 @@ struct AdviceSlipApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Advice.self)
+        .modelContainer(for: Snippet.self)
     }
 }

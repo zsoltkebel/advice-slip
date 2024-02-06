@@ -20,6 +20,10 @@ struct AdviceSlip: Codable, Hashable {
 }
 
 class AdviceSlipDataSource: APIDataSource {
+    func getID() -> Int {
+        return DataSource.adviceSlip.rawValue
+    }
+    
     func getName() -> String {
         "Advice Slip"
     }

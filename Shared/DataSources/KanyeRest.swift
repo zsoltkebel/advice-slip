@@ -14,6 +14,10 @@ struct KanyeResponse: APIResponse {
 }
 
 class KanyeDataSource: APIDataSource {
+    func getID() -> Int {
+        return DataSource.kanyeRest.rawValue
+    }
+    
     func getName() -> String {
         return "Kanye Rest"
     }

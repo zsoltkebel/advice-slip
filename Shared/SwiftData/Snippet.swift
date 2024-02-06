@@ -10,38 +10,39 @@ import SwiftUI
 import SwiftData
 import AppIntents
 
-@Model final class Advice {
-    var id: Int
-    var advice: String
-    // var sourceID: Int // corresponding to DataSource enum's rawValue
+@Model final class Snippet {
+    var content: String
+    var author: String?
+    var sourceID: Int // corresponding to DataSource enum's rawValue
     
-    init(id: Int, advice: String) {
-        self.id = id
-        self.advice = advice
+    init(content: String, author: String? = nil, sourceID: Int) {
+        self.content = content
+        self.author = author
+        self.sourceID = sourceID
     }
     
-//    init(from: APIResponse, sourceID: Int) {
-//        self.advice = from.getContent()
-//        self.author = from.getAuthor()
-//        self.sourceID = sourceID
-//    }
+    init(from: APIResponse, sourceID: Int) {
+        self.content = from.getContent()
+        self.author = from.getAuthor()
+        self.sourceID = sourceID
+    }
 }
 
-extension Advice {
+extension Snippet {
     @Transient
     var color: Color {
-        let seed = advice.hashValue
+        let seed = content.hashValue
         var generator: RandomNumberGenerator = SeededRandomGenerator(seed: seed)
         return .random(using: &generator)
     }
     
     @Transient
     var displayAdvice: String {
-        advice.isEmpty ? "Can't find advice" : advice
+        content.isEmpty ? "Can't find advice" : content
     }
     
-    static var preview: Advice {
-        Advice(id: 0, advice: "If you don't want something to be public, don't post it on the Internet.")
+    static var preview: Snippet {
+        Snippet(content: "If you don't want something to be public, don't post it on the Internet.", sourceID: 0)
     }
 }
 

@@ -17,6 +17,10 @@ struct ZenQuotesResponse: APIResponse {
 }
 
 class ZenQuotesDataSource: APIDataSource {
+    func getID() -> Int {
+        return DataSource.zenQuotes.rawValue
+    }
+    
     func getName() -> String {
         return "Zen Quotes"
     }

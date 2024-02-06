@@ -21,10 +21,10 @@ actor PreviewSampleData {
     }()
 
     static var inMemoryContainer: () throws -> ModelContainer = {
-        let schema = Schema([Advice.self])
+        let schema = Schema([Snippet.self])
         let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try! ModelContainer(for: schema, configurations: [configuration])
-        let sampleData: [any PersistentModel] = [Advice.preview]
+        let sampleData: [any PersistentModel] = [Snippet.preview]
         Task { @MainActor in
             sampleData.forEach {
                 container.mainContext.insert($0)

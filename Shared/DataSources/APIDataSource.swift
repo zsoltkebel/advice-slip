@@ -18,6 +18,7 @@ extension APIResponse {
 }
 
 protocol APIDataSource {
+    func getID() -> Int
     func getName() -> String
     func getURL() -> URL?
     func decode(from data: Data) throws -> APIResponse

@@ -13,25 +13,30 @@ struct SaveIntent: AppIntent {
     static var title: LocalizedStringResource = "Toggle Advice Bookmark"
     static var description: IntentDescription = "Saves or deletes advice."
     
-    @Parameter(title: "Advice ID")
-    var adviceID: Int
+    @Parameter(title: "Advice Content")
+    var content: String
     
-    @Parameter(title: "Advice")
-    var adviceText: String
+    @Parameter(title: "Advice Author")
+    var author: String?
+    
+    @Parameter(title: "Advice Source")
+    var sourceID: Int
     
     init() {
-        self.adviceID = 0
-        self.adviceText = "None"
+        self.content = "None"
+        self.author = "None"
+        self.sourceID = 0
     }
     
-    init(adviceID: Int, adviceText: String) {
-        self.adviceID = adviceID
-        self.adviceText = adviceText
+    init(content: String, author: String? = nil, sourceID: Int) {
+        self.content = content
+        self.author = author
+        self.sourceID = sourceID
     }
     
     func perform() async throws -> some IntentResult {
-        print("Current advice: #\(adviceID), \(adviceText)")
-        await WiseBuddy.shared.toggleSave(adviceID: adviceID, adviceText: adviceText)
+        let slip = Snippet(content: content, author: author, sourceID: sourceID)
+        await WiseBuddy.shared.toggleSave(snippet: slip)
         return .result()
     }
 }

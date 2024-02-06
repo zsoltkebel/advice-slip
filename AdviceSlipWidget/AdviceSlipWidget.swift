@@ -14,7 +14,7 @@ struct Provider: TimelineProvider {
     
     init() {
         do {
-            modelContainer = try ModelContainer(for: Advice.self)
+            modelContainer = try ModelContainer(for: Snippet.self)
         } catch {
             fatalError("Failed to create the model container: \(error)")
         }
@@ -38,21 +38,21 @@ struct Provider: TimelineProvider {
             // fetch new advice
             guard let adviceSlip = await WiseBuddy.shared.getAdviceToShow() else {
                 // exit if error
-                let newEntry = SimpleEntry(date: .now, slip: AdviceSlip(id: 0, advice: "No advice"), saved: false)
+                let newEntry = SimpleEntry(date: .now, slip: Snippet(content: "No Data", author: "Author", sourceID: 0), saved: false)
                 let timeline = Timeline(entries: [newEntry], policy: .never)
                 completion(timeline)
                 return
             }
             
             // check if it's saved
-            var fetchDescriptor = FetchDescriptor(sortBy: [SortDescriptor(\Advice.id, order: .forward)])
+            var fetchDescriptor = FetchDescriptor(sortBy: [SortDescriptor(\Snippet.sourceID, order: .forward)])
             guard let now = WiseBuddy.shared.generatedAt else {
                 //TODO: fix logic here
                 return
             }
             
-            let id = adviceSlip.id
-            fetchDescriptor.predicate = #Predicate { $0.id == id }
+            let content = adviceSlip.content
+            fetchDescriptor.predicate = #Predicate { $0.content == content }
             if let savedAdvice = try? modelContainer.mainContext.fetch(fetchDescriptor) {
                 let isSaved = savedAdvice.first != nil
                 let newEntry = SimpleEntry(date: now, slip: adviceSlip, saved: isSaved)
@@ -68,7 +68,7 @@ struct Provider: TimelineProvider {
              Return "No Trips" entry with .never policy when there is no upcoming trip.
              The main app triggers a widget update when adding a new trip.
              */
-            let newEntry = SimpleEntry(date: .now, slip: AdviceSlip(id: 0, advice: "No advice"), saved: false)
+            let newEntry = SimpleEntry(date: .now, slip: Snippet(content: "No Data", sourceID: 0), saved: false)
             let timeline = Timeline(entries: [newEntry], policy: .never)
             completion(timeline)
         }
@@ -78,12 +78,12 @@ struct Provider: TimelineProvider {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     
-    let slip: AdviceSlip
+    let slip: Snippet
     let saved: Bool
     
     static var placeholderEntry: SimpleEntry {
         let now = Date()
-        return SimpleEntry(date: now, slip: AdviceSlip(id: 0, advice: "If you don't want something to be public, don't post it on the Internet."), saved: false)
+        return SimpleEntry(date: now, slip: Snippet(content: "If you don't want something to be public, don't post it on the Internet.", sourceID: 0), saved: false)
     }
 }
 
@@ -95,7 +95,7 @@ struct AdviceSlipWidgetEntryView : View {
     var body: some View {
         VStack {
             Spacer(minLength: 0)
-            Text(entry.slip.advice)
+            Text(entry.slip.content)
                 .minimumScaleFactor(0.1)
                 .font(.title3)
             Spacer(minLength: 10)
@@ -108,7 +108,7 @@ struct AdviceSlipWidgetEntryView : View {
                 }
                 if family != .systemSmall {
                     if #available(iOS 17.0, *) {
-                        Button(intent: SaveIntent(adviceID: entry.slip.id, adviceText: entry.slip.advice)) {
+                        Button(intent: SaveIntent(content: entry.slip.content, author: entry.slip.author, sourceID: entry.slip.sourceID)) {
                             Image(systemName: entry.saved ? "bookmark.fill" : "bookmark")
                         }
                         .buttonStyle(.bordered)

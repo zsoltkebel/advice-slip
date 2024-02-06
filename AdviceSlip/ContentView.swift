@@ -12,8 +12,8 @@ import WidgetKit
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     
-    @Query(sort: \Advice.id, order: .forward)
-    var advices: [Advice]
+    @Query(sort: \Snippet.sourceID, order: .forward)
+    var advices: [Snippet]
     
     @AppStorage("dataSource", store: UserDefaults.shared) private var selectedDataSource: DataSource = .adviceSlip
     
@@ -59,7 +59,7 @@ struct ContentView: View {
                             }
                         } label: {
                             Button(action: {}, label: {
-                                Text("Snippet Source")
+                                Text("Source")
                                 Text(selectedDataSource.getName())
                                 Image(systemName: "network")
                             })
@@ -71,7 +71,7 @@ struct ContentView: View {
         }
     }
     
-    private func deleteAdvice(_ advice: Advice) {
+    private func deleteAdvice(_ advice: Snippet) {
         //TODO: if selection is implemented need to deselect it
         modelContext.delete(advice)
     }

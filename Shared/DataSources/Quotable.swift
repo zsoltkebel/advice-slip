@@ -17,6 +17,10 @@ struct QuotableResponse: APIResponse {
 }
 
 class QuotableDataSource: APIDataSource {
+    func getID() -> Int {
+        return DataSource.quotable.rawValue
+    }
+    
     func getName() -> String {
         return "Quotable"
     }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct AdviceListItem: View {
-    var advice: Advice
+    var advice: Snippet
     
     var body: some View {
         HStack {
-            Text(advice.advice)
+            Text(advice.content)
             Spacer(minLength: 10)
-            Text("#\(advice.id)")
+            Text("#\(advice.sourceID)")
                 .foregroundStyle(.secondary)
         }
     }
