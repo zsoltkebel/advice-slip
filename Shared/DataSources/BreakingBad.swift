@@ -18,7 +18,7 @@ struct BreakingBadResponse: APIResponse {
 
 class BreakingBadDataSource: APIDataSource {
     func getID() -> Int {
-        return DataSource.BreakingBadQuotes.rawValue
+        return DataSource.breakingBadQuotes.rawValue
     }
     
     func getName() -> String {

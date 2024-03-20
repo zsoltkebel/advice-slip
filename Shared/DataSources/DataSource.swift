@@ -9,7 +9,7 @@ import Foundation
 
 enum DataSource: Int, CaseIterable, Identifiable {
     // Order matters!
-    case random, adviceSlip, kanyeRest, quotable, zenQuotes, BreakingBadQuotes
+    case random, adviceSlip, kanyeRest, quotable, zenQuotes, breakingBadQuotes
 
     var id: Int { return self.rawValue }
     
@@ -23,7 +23,7 @@ enum DataSource: Int, CaseIterable, Identifiable {
     func getAPIDataSource() -> APIDataSource {
         switch self {
         case .random:
-            return [AdviceSlipDataSource(), KanyeDataSource(), QuotableDataSource(), ZenQuotesDataSource(),BreakingBadDataSource()].randomElement() as! APIDataSource
+            return [AdviceSlipDataSource(), KanyeDataSource(), QuotableDataSource(), ZenQuotesDataSource(), BreakingBadDataSource()].randomElement() as! APIDataSource
         case .adviceSlip:
             return AdviceSlipDataSource()
         case .kanyeRest:
@@ -32,7 +32,7 @@ enum DataSource: Int, CaseIterable, Identifiable {
             return QuotableDataSource()
         case .zenQuotes:
             return ZenQuotesDataSource()
-        case .BreakingBadQuotes:
+        case .breakingBadQuotes:
             return BreakingBadDataSource()
         }
     }
