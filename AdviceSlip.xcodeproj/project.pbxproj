@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C415982BAB4D9E00FE6750 /* BreakingBad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C415972BAB4D9E00FE6750 /* BreakingBad.swift */; };
+		04C415992BAB4D9E00FE6750 /* BreakingBad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C415972BAB4D9E00FE6750 /* BreakingBad.swift */; };
 		AF3AA9992B71A9F700E3EDA6 /* AdviceSlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA9982B71A9F700E3EDA6 /* AdviceSlip.swift */; };
 		AF3AA99B2B71AA0400E3EDA6 /* KanyeRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA99A2B71AA0400E3EDA6 /* KanyeRest.swift */; };
 		AF3AA99D2B71AA1000E3EDA6 /* Quotable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3AA99C2B71AA1000E3EDA6 /* Quotable.swift */; };
@@ -65,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04C415972BAB4D9E00FE6750 /* BreakingBad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBad.swift; sourceTree = "<group>"; };
 		AF3AA9982B71A9F700E3EDA6 /* AdviceSlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceSlip.swift; sourceTree = "<group>"; };
 		AF3AA99A2B71AA0400E3EDA6 /* KanyeRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanyeRest.swift; sourceTree = "<group>"; };
 		AF3AA99C2B71AA1000E3EDA6 /* Quotable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotable.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 				AF3AA99A2B71AA0400E3EDA6 /* KanyeRest.swift */,
 				AF3AA99C2B71AA1000E3EDA6 /* Quotable.swift */,
 				AF3AA9A72B71BC6900E3EDA6 /* ZenQuotes.swift */,
+				04C415972BAB4D9E00FE6750 /* BreakingBad.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -322,6 +326,7 @@
 				AF7A1B572B6ABD30000FD995 /* WiseBuddy.swift in Sources */,
 				AF7A1B5B2B6AC476000FD995 /* ModelContainerPreview.swift in Sources */,
 				AF7A1B322B6A75B9000FD995 /* Snippet.swift in Sources */,
+				04C415982BAB4D9E00FE6750 /* BreakingBad.swift in Sources */,
 				AF3AA99D2B71AA1000E3EDA6 /* Quotable.swift in Sources */,
 				AF3AA9992B71A9F700E3EDA6 /* AdviceSlip.swift in Sources */,
 				AF3AA9A22B71AA7C00E3EDA6 /* APIDataSource.swift in Sources */,
@@ -332,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C415992BAB4D9E00FE6750 /* BreakingBad.swift in Sources */,
 				AF3AA9A02B71AA2100E3EDA6 /* Quotable.swift in Sources */,
 				AF7A1B3F2B6A7747000FD995 /* AdviceSlipWidgetBundle.swift in Sources */,
 				AF7A1B412B6A7747000FD995 /* AdviceSlipWidget.swift in Sources */,
